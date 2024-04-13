@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./ModalFolder.css";
 
 function ModalFolder() {
   const [addCategory, setAddCategory] = useState({
@@ -23,7 +22,7 @@ function ModalFolder() {
   };
 
   return (
-    <section className="h-380 w-screen bg-222ab flex items-center justify-center">
+    <section className="h-screen w-screen bg-222ab flex items-center justify-center">
       <div className="relative m-auto w-380 h-84 bg-222 rounded-2xl">
         <h2 className="text-slate-100 text-2xl p-7 pb-4 pt-6 font-semibold">
           Add Category
