@@ -8,7 +8,7 @@ export default {
         "222": "#222222",
         red: "#F6343469",
         blue: "#3145f669",
-        green: "#329D3D69",
+        green: "#329D3D68",
         orange: "#FFAA2B69",
         violet: "#F634CC69",
       },
