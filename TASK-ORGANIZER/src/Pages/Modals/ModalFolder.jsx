@@ -24,7 +24,7 @@ function ModalFolder({closeModal}) {
 
   return (
     <section className="h-screen w-screen absolute bg-222ab flex items-center justify-center">
-      <div className="relative m-auto w-380 h-84 bg-222 rounded-2xl">
+      <div className="relative m-auto w-380 h-84 bg-red rounded-2xl">
         <h2 className="text-slate-100 text-2xl p-7 pb-4 pt-6 font-semibold">
           Add Category
         </h2>
@@ -40,7 +40,7 @@ function ModalFolder({closeModal}) {
               Name
             </label>
             <input
-              className="text-xl text-slate-300 opacity-15 ml-7 mr-7 h-8 outline-none border-b border-slate-100 bg-222"
+              className="text-xl text-slate-300 ml-7 mr-7 h-8 outline-none border-b border-slate-100 bg-transparent"
               type="text"
               placeholder="Category"
               name="nameCategory"
