@@ -3,6 +3,11 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      colors:{
+        navbar:"#f19c4d"
+      }
+    },
+    extend: {
       colors: {
         "222ab": "#222222ab",
         "222": "#222222",
