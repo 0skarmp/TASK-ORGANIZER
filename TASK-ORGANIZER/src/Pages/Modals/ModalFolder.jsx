@@ -18,7 +18,7 @@ function ModalFolder({closeModal}) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(`Categoria" ${addCategory.nameCategory}`);
+    console.log(`Categoria: ${addCategory.nameCategory}`);
     console.log(`Color: ${addCategory.color}`);
   };
 
