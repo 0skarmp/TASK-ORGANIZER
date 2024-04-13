@@ -1,15 +1,19 @@
-
-import './App.css'
+import List from './Pages/Folder/Index'
+import Navbar from './Pages/Navbar/Index'
 
 function App() {
-  
+
 
   return (
-    <>  <div className=' ml-20 mt-10'>
-      <h1 className='text-slate-800'>
-        HOLA MUNDO
-      </h1>
+    <>
+      <div className='fixed bg-black'>
+        <Navbar />
+        <div className='mt-24'>
+          <List />
+        </div>
       </div>
+
+
     </>
   )
 }
