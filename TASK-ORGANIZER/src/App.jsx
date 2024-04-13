@@ -1,5 +1,5 @@
 import List from './Pages/Folder/Index'
-import Navbar from './Pages/Navbar/Index'
+// import Navbar from './Pages/Navbar/Index'
 import './App.css'
 
 function App() {
@@ -7,12 +7,16 @@ function App() {
 
   return (
     <>
-      <div className='fixed bg-black'>
+    <div>
+      
+      <List/>
+    </div>
+      {/* <div className='fixed bg-black'>
         <Navbar />
         <div className='mt-24'>
           <List />
         </div>
-      </div>
+      </div> */}
 
 
     </>

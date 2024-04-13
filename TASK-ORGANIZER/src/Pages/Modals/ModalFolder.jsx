@@ -24,7 +24,7 @@ function ModalFolder({closeModal}) {
 
   return (
     <section className="h-screen w-screen absolute bg-222ab flex items-center justify-center">
-      <div className="relative m-auto w-380 h-84 bg-red rounded-2xl">
+      <div className="relative m-auto w-380 h-84 bg-red100 opacity-80 rounded-2xl">
         <h2 className="text-slate-100 text-2xl p-7 pb-4 pt-6 font-semibold">
           Add Category
         </h2>
