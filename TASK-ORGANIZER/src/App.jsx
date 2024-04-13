@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <div className='fixed bg-black'>
+      <div className='fixed bg-222ab'>
         <Navbar />
         <div className='mt-24'>
           <List />

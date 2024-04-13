@@ -2,11 +2,7 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {
-      colors:{
-        navbar:"#f19c4d"
-      }
-    },
+    
     extend: {
       colors: {
         "222ab": "#222222ab",
@@ -16,6 +12,8 @@ export default {
         green: "#329D3D68",
         orange: "#FFAA2B69",
         violet: "#F634CC69",
+        navbar:"#f19c4d",
+        black40:"#41414166"
       },
       width: {
         380: "350px",

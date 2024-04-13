@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
-function ModalFolder() {
+function ModalFolder({closeModal}) {
   const [addCategory, setAddCategory] = useState({
     nameCategory: "",
     color: "",
@@ -22,12 +23,12 @@ function ModalFolder() {
   };
 
   return (
-    <section className="h-screen w-screen bg-222ab flex items-center justify-center">
+    <section className="h-screen w-screen absolute bg-222ab flex items-center justify-center">
       <div className="relative m-auto w-380 h-84 bg-222 rounded-2xl">
         <h2 className="text-slate-100 text-2xl p-7 pb-4 pt-6 font-semibold">
           Add Category
         </h2>
-        <span className="absolute top-8 right-7 scale-150 text-slate-300 hover:text-slate-400 pl-1 pr-1 rounded-md cursor-pointer">
+        <span onClick={closeModal} className="absolute top-8 right-7 scale-150 text-slate-300 hover:text-slate-400 pl-1 pr-1 rounded-md cursor-pointer">
           🗙
         </span>
         <form onSubmit={handleSubmit}>
@@ -91,5 +92,8 @@ function ModalFolder() {
     </section>
   );
 }
+ModalFolder.propTypes = {
+  closeModal: PropTypes.func.isRequired,
+};
 
 export default ModalFolder;
