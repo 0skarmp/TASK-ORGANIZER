@@ -16,20 +16,27 @@ const List = () => {
 
   return (
     <>
-      
-      <div className='flex w-screen h-screen fixed bg-slate-200'>
-      <div className='bg-red100 flex items-center justify-center fixed w-full h-24 font-bold'>
-        <img className='w-14 h-18 left-8 fixed' src={logo} alt="" />
-        <h1 className='flex left-40 fixed text-white text-5xl '>
-          Task Organizer
-        </h1>
 
-      </div>
-        <button  onClick={setshowModal} className="bg-stone-700 flex items-center mt-28 text-white text-2xl absolute px-8 h-14 ml-5 font-bold rounded-lg top-4 hover:bg-slate-400 ">
-          <img className='mx-2 fill-white' src={plus} alt=" plus" />
-          Add Folder
-        </button>
-        {openModal && <ModalFolder closeModal={closeModal} />}
+      <div className='flex w-screen h-screen fixed bg-slate-200 '>
+        <div className='bg-red100 flex items-center justify-center fixed w-full h-24 font-bold'>
+          <img className='w-14 h-18 left-8 fixed' src={logo} alt="" />
+          <h1 className='flex left-40 fixed text-white text-5xl '>
+            Task Organizer
+          </h1>
+
+        </div>
+        
+        <div>
+          <button onClick={setshowModal} className="bg-stone-700 flex   items-center mt-28 text-white text-2xl  px-8 h-14 ml-5 font-bold rounded-lg top-4 hover:bg-slate-400 ">
+            <img className='mx-2 fill-white' src={plus} alt=" plus" />
+            Add Folder
+          </button>
+          {openModal && <ModalFolder closeModal={closeModal} />}
+        </div>
+        <div>
+          <button className="bg-stone-700  items-center mt-28 text-white text-2xl flex absolute  px-8 h-14  font-bold rounded-lg top-4 hover:bg-slate-400 ml-2 "> <img className='mx-2 fill-white' src={plus} alt=" plus" />otro boton</button>
+        </div>
+        
       </div>
 
     </>
