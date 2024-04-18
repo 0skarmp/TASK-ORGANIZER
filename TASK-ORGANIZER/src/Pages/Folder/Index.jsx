@@ -46,11 +46,11 @@ const List = () => {
             Task Organizer
           </h1>
         </div>
-        <div className="pt-5 mt-24 h-auto w-auto flex flex-wrap ">
+        <div className="pt-5 mt-24 h-auto w-auto  ">
           {/* Agregar dinamicamente los folders */}
           {folder.map((fol, i) => {
             return (
-              <div  key={i} className={`${fol.color} text-center mx-2 rounded-lg  pt-2 w-80  max-w-52 overflow-hidden break-words` }>
+              <div  key={i} className={`${fol.color} float-left text-center mx-2 rounded-lg  pt-2 w-80  max-w-52 overflow-hidden break-words` }>
                 <span className="block border-b ">{fol.name}</span>
                 <div className="flex  justify-center pt-2">
                   <button className="px-2  text-center mx-4 "> <span className="font-bold text-lg">+</span> add task</button>
