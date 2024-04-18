@@ -46,7 +46,7 @@ const List = () => {
             Task Organizer
           </h1>
         </div>
-        <div className="flex flex-wrap items-start pt-5 mt-24 h-auto w-auto  ">
+        <div className="flex flex-wrap items-start pt-5 mt-24 h-auto w-auto   ">
           {/* Agregar dinamicamente los folders */}
           {folder.map((fol, i) => {
             return (
