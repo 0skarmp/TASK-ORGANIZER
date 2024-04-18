@@ -46,21 +46,21 @@ const List = () => {
             Task Organizer
           </h1>
         </div>
-        <div className="pt-5 mt-24 h-full w-full flex">
+        <div className="pt-5 mt-24 h-auto w-auto flex flex-wrap ">
           {/* Agregar dinamicamente los folders */}
           {folder.map((fol, i) => {
             return (
-              <div key={i} className={`${fol.color} h-auto`}>
-                {fol.name}
-                <div>
-                  <button>add task</button>
+              <div  key={i} className={`${fol.color} m-2 text-center mx-2 rounded-lg  pt-2 w-80  max-w-52 overflow-hidden break-words` }>
+                <span className="block border-b ">{fol.name}</span>
+                <div className="flex  justify-center pt-2">
+                  <button className="px-2  text-center mx-4 "> <span className="font-bold text-lg">+</span> add task</button>
                 </div>
               </div>
             );
           })}
           <button
             onClick={setshowModal}
-            className="h-12 mx-5 bg-stone-700 flex items-center text-white text-2xl font-bold rounded-lg hover:bg-slate-400 p-1 pr-7"
+            className="h-12 m-5 bg-stone-700 flex items-center text-white text-2xl font-bold rounded-lg hover:bg-slate-400 p-1 pr-7"
           >
             <img className="mx-2 fill-white" src={plus} alt=" plus" />
             Add Folder
