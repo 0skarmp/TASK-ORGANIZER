@@ -1,13 +1,15 @@
-import { useContext, useState,  } from "react";
+import { useContext, useState,  useEffect} from "react";
 import plus from "../../assets/images/plus.png";
 import ModalFolder from "../Modals/ModalFolder";
 import logo from "../../assets/images/yoshi-removebg-preview.png";
 import { contexto } from "../../Contexto";
+import  ModalTask  from "../Modals/ModalTask";
 
 const List = () => {
   const { addFolder, setAddFolder } = useContext(contexto);
   const [folder, setFolder] = useState([]);
   const [openModal, setOpenModal] = useState(false);
+  const [openTask, setOpenTask] = useState(false)
 
   //Abrir Modal
   const setshowModal = () => {
@@ -19,6 +21,19 @@ const List = () => {
     setOpenModal(false);
   };
 
+  //abrir Modal Task
+  const modalOpenTask = () =>{
+    setOpenTask(true);
+    console.log("modal abierto:",openTask)
+  };
+
+  //cerrrar Modal Task
+  const  modalCloseTask = () =>{
+    setOpenTask(false);
+    console.log("Modal cerrado:",openTask)
+  };
+
+  
   const handleAddFolder = () => {
     // Datos por defecto
     const defaultFolder = {
@@ -53,7 +68,8 @@ const List = () => {
               <div  key={i} className={`${fol.color} m-2 text-center mx-2 rounded-lg  pt-2 w-80  max-w-52 overflow-hidden break-words` }>
                 <span className="block border-b ">{fol.name}</span>
                 <div className="flex  justify-center pt-2">
-                  <button className="px-2  text-center mx-4 "> <span className="font-bold text-lg">+</span> add task</button>
+                  <button  onClick={modalOpenTask} className="px-2  text-center mx-4 "> <span className="font-bold text-lg">+</span> add task
+                  </button>
                 </div>
               </div>
             );
@@ -68,6 +84,7 @@ const List = () => {
         </div>
       </div>
       {openModal && <ModalFolder closeModal={closeModal} handleAddFolder={handleAddFolder}/>}
+      {openTask && <ModalTask close={modalCloseTask}/>}
     </>
   );
 };
